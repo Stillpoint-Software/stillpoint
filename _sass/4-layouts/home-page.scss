@@ -38,6 +38,9 @@
   @media only screen and (max-width: $mobile) {
     font-size: 20px;
     line-height: 36px;
+    white-space: wrap;
+    overflow: x-small;
+    
   }
 }
 
