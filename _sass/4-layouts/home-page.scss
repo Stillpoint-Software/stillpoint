@@ -19,6 +19,10 @@
   border-radius: 5px;
   padding: 20px;
   height: 100%;
+
+  @media only screen and (max-width: $mobile) {
+    padding: 5px;
+  }
 }
 
 .article__title {
