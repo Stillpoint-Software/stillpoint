@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="carousel" data-flickity='{ "groupCells": "100%", "wrapAround": false, "cellAlign": "center"}'>
+    <div class="carousel" data-flickity='{ "groupCells": "100%", "autoPlay": "true"}'>
         {% if site.services.size > 0 %}
         {% assign sortedservices = site.services | sort: 'order'%}
         {% for service in site.services %}
