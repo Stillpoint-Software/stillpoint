@@ -1,0 +1,120 @@
+/* Services */
+.services {
+  flex-grow: 1;
+  font-size: 20px;
+  margin-bottom: 0 25px;
+  position: relative;
+  font-family: $heading-font-family;
+  color: $blue-gray;
+  line-height: 25px;
+
+  @media only screen and (max-width: $desktop) {
+    padding: 0;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 10px;
+  }
+}
+
+.services__excerpt {
+  margin-right: 15px;
+  margin-left: 5px;
+  background-color: $background-color-alt;
+  box-sizing: content-box;
+  border-radius: 5px;
+
+  .services__title {
+    font-family: $base-font-family;
+    font-size: 20px;
+    font-style: normal;
+    color: $dark;
+    text-transform: uppercase;
+  }
+
+  .service__text {
+    padding: 10px 10px;
+    font-style: italic;
+    display: flex;
+
+
+    .service__cite {
+      font-family: $base-font-family;
+      font-size: 10px;
+      font-style: normal;
+      color: $dark;
+      text-transform: uppercase;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      padding: 20px 0;
+      font-size: 21px;
+    }
+  }
+}
+
+.services__meta {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $dark;
+
+  .services-tags__box {
+    display: flex;
+
+    &::before {
+      display: block;
+      padding: 0 0.35rem;
+    }
+
+    .services__tag {
+      color: inherit;
+    }
+  }
+
+  .services__tag {
+    &:hover {
+      color: $brand-color;
+    }
+
+    &::after {
+      content: ",";
+      margin-right: 2px;
+      display: inline-block;
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.services__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-family: $base-font-family;
+  text-transform: uppercase;
+  justify-content: right;
+  color: $brand-color;
+  padding-right: 10px;
+}
+
+.services__author {
+  display: flex;
+  align-items: center;
+
+  .services__author-name {
+    color: inherit;
+    padding-right: 10px;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}

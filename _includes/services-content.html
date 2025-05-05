@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="carousel" data-flickity='{ "groupCells": "100%", "wrapAround": false, "cellAlign": "center"}'>
+        {% if site.services.size > 0 %}
+        {% assign sortedservices = site.services | sort: 'order'%}
+        {% for service in site.services %}
+        <div class="carousel-cell">
+            <!-- <a href="{{site.baseurl}}/about/" class="post-author__image" aria-label="{{site.author.name}}"> -->
+            <img class="lazy" data-src="{{site.baseurl}}{{service.image}}" alt="{{service.title}}" />
+            <!-- </a> -->
+            <h2 class="service__title">{{service.title}}</h2>
+            <p class="service__text">
+                {% if service.description %}{{ service.description }}{% else %}{{ service.content |
+                strip_html | truncate: 410, "" }}{% endif %}
+            </p>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>

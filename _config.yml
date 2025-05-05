@@ -6,16 +6,18 @@ url: https://stillpoint.netlify.app
 hero:
   hero__image:
   hero__title: Stillpoint Software, Inc.
-  hero__description: 
+  hero__description:
 author:
-  name: 
-  bio: 
-  image: 
-  avatar: 
+  name:
+  bio:
+  image:
+  avatar:
 contact:
   description: Have any questions? Reach out to us from our contact form and we will get back to you shortly.
 collections:
   sections:
+    output: true
+  services:
     output: true
 include:
   - _pages
@@ -43,7 +45,7 @@ plugins:
   - jekyll/tagging
 pagination:
   enabled: false
-  per_page: 6   # Number of posts per page
+  per_page: 6 # Number of posts per page
   permalink: "/page:num/"
 tag_page_dir: tag
 tag_page_layout: tag_page
