@@ -1,21 +1,23 @@
 title: Stillpoint Software, Inc.
-logo: /assets/brand-logo.png
+logo: /assets/brand-logoblue.png
 description: We are nerds when it comes to software. Our mission is to address the B2B2C communication gap, across all systems and devices, to reach more people more effectively, both inside and outside the enterprise.
 baseurl: ""
 url: https://stillpoint.netlify.app
 hero:
   hero__image:
   hero__title: Stillpoint Software, Inc.
-  hero__description: 
+  hero__description:
 author:
-  name: 
-  bio: 
-  image: 
-  avatar: 
+  name:
+  bio:
+  image:
+  avatar:
 contact:
   description: Have any questions? Reach out to us from our contact form and we will get back to you shortly.
 collections:
   sections:
+    output: true
+  services:
     output: true
 include:
   - _pages
@@ -43,7 +45,7 @@ plugins:
   - jekyll/tagging
 pagination:
   enabled: false
-  per_page: 6   # Number of posts per page
+  per_page: 6 # Number of posts per page
   permalink: "/page:num/"
 tag_page_dir: tag
 tag_page_layout: tag_page

@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="carousel" data-flickity='{ "groupCells": "100%", "autoPlay": "true"}'>
+        {% if site.services.size > 0 %}
+        {% assign sortedservices = site.services | sort: 'order'%}
+        {% for service in site.services %}
+        <div class="carousel-cell">
+            <img class="lazy" data-src="//wsrv.nl/?url={{ site.baseurl | absolute_url }}{{ service.image }}" alt="{{ service.title }}" />
+            <h2 class="service__title">{{service.title}}</h2>
+            <p class="service__text">
+                {% if service.description %}{{ service.description }}{% else %}{{ service.content |
+                strip_html | truncate: 410, "" }}{% endif %}
+            </p>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>

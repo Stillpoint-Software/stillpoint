@@ -1,6 +1,7 @@
 /* Base styles */
 html {
   transition: margin-right 50ms;
+
   &.hide-scroll {
     margin-right: -14px;
     overflow: hidden;
@@ -29,6 +30,7 @@ body {
       pointer-events: none;
     }
   }
+
   &::after {
     content: "";
     position: fixed;
@@ -71,6 +73,10 @@ h6 {
 
 h1 {
   font-size: $font-size-h1;
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 32px;
+  }
 }
 
 h2 {
@@ -100,6 +106,7 @@ blockquote {
   font-size: 28px;
   line-height: 38px;
   color: $dark;
+
   &::before {
     content: "\201C";
     position: absolute;
@@ -108,14 +115,15 @@ blockquote {
     font-size: 3.5em;
     color: $brand-color;
   }
-   &::after {
-      content: "\201D";
-      position: absolute;
-      top: .35em;
-      right: 0.05em;
-      font-size: 3.5em;
-      color: $brand-color;
-    }
+
+  &::after {
+    content: "\201D";
+    position: absolute;
+    top: .35em;
+    right: 0.05em;
+    font-size: 3.5em;
+    color: $brand-color;
+  }
 
   p {
     margin-bottom: 10px;
@@ -126,8 +134,9 @@ blockquote {
     font-size: 16px;
     font-style: normal;
     color: $dark;
+
     &:before {
-      content: "\2014""\00a0";
+      content: "\2014" "\00a0";
     }
   }
 
@@ -153,7 +162,8 @@ img,
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  & + em {
+
+  &+em {
     display: block;
     margin-top: 15px;
     font-size: 14px;
@@ -165,6 +175,7 @@ img,
 
     a {
       border-bottom: 1px solid $dark;
+
       &:hover {
         border-color: $brand-color;
       }
@@ -176,6 +187,7 @@ a {
   text-decoration: none;
   color: $dark;
   transition: $global-transition;
+
   &:hover {
     color: $brand-color;
   }
@@ -225,6 +237,7 @@ table th {
 table tr {
   background-color: $gray;
   transition: all 0.3s ease;
+
   &:nth-child(even) {
     background-color: transparent;
   }
@@ -238,6 +251,7 @@ table td {
 
 .gallery-box {
   margin-bottom: 30px;
+
   em {
     display: block;
     margin-top: 15px;
@@ -250,6 +264,7 @@ table td {
 
     a {
       border-bottom: 1px solid $dark;
+
       &:hover {
         border-color: $brand-color;
       }
@@ -263,6 +278,7 @@ table td {
   justify-content: center;
   align-content: center;
   grid-gap: 10px;
+
   img {
     width: 100%;
     height: auto;

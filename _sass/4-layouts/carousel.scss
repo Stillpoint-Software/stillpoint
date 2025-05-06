@@ -4,51 +4,34 @@
 
 .carousel-cell {
   width: 30%;
-  height: 200px;
-  margin: 0 10px;
-  background: $background-color-alt;
-  border-radius: 5px;
+  height: 500px;
+  margin-left: 10px;
+  margin-right: 15px;
+  border: solid 1px $border-color;
+  border-radius: 10px;
 
-  .blockquote__text {
-    padding: 20px 15px 0 35px;
-    font-family: $heading-font-family;
-    font-style: italic;
-    &::before {
-      content: "\201C";
-      position: absolute;
-      top: -0.3em;
-      left: 0.02em;
-      font-size: 2.5em;
-      color: $brand-color;
-      justify-content: center;
+  .service__title {
+    margin: 10px 10px;
+    font-size: 1.25rem;
+    line-height: 34px;
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 20px;
+      line-height: 36px;
     }
   }
-   @media only screen and (max-width: $mobile) {
-    width: 100%;
-     .blockquote__text {
-        &::before {
-          content: "\201C";
-          position: absolute;
-          top: .39em;
-          left: -0.02em;
-          font-size: 3.5em;
-          color: $brand-color;
-           justify-content: left;
-        }
-      }
-   }
-}
 
-.blockquote__cite {
-  font-family: $base-font-family;
-  font-size: 15px;
-  font-style: normal;
-  color: $brand-color;
-  text-transform: uppercase;
-  text-align: right;
-  padding-right: 10px;
-}
+  .service__text {
+    margin: 10px 10px;
+    font-size: 15px;
+    line-height: 25px;
+    color: $blue-gray;
+  }
 
+  @media only screen and (max-width: $mobile) {
+    width: 90%;
+  }
+}
 .carousel-cell:before {
   text-align: left;
 }
@@ -56,6 +39,7 @@
 .flickity-button {
   background: $blue-gray;
 }
+
 .flickity-button:hover {
   background: $brand-color;
 }
@@ -64,22 +48,25 @@
   width: 30px;
   height: 30px;
 }
+
 /* icon color */
 .flickity-button-icon {
   fill: white;
 }
+
 /* position outside */
 .flickity-prev-next-button.previous {
-  left: -40px;
+  left: -10px;
 
   @media only screen and (max-width: $mobile) {
     left: -15px
-    }
+  }
 }
 
 .flickity-prev-next-button.next {
-  right: -40px;
+  right: -20px;
+
   @media only screen and (max-width: $mobile) {
-    right: -20px
+    right: -15px
   }
 }
