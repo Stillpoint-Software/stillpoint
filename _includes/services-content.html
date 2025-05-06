@@ -4,9 +4,7 @@
         {% assign sortedservices = site.services | sort: 'order'%}
         {% for service in site.services %}
         <div class="carousel-cell">
-            <!-- <a href="{{site.baseurl}}/about/" class="post-author__image" aria-label="{{site.author.name}}"> -->
-            <img class="lazy" data-src="{{site.baseurl}}{{service.image}}" alt="{{service.title}}" />
-            <!-- </a> -->
+            <img class="lazy" data-src="//wsrv.nl/?url={{ site.baseurl | absolute_url }}{{ service.image }}" alt="{{ service.title }}" />
             <h2 class="service__title">{{service.title}}</h2>
             <p class="service__text">
                 {% if service.description %}{{ service.description }}{% else %}{{ service.content |
