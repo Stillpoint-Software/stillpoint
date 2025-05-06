@@ -2,7 +2,7 @@
     {% if site.sections.size > 0 %}
     {% assign sortedsection = site.sections | sort: 'order'%}
     {% for sorted in sortedsection %}
-    <div class="row section" style="padding-top: 20px;">
+    <div class="row section">
         {{sorted}}
     </div>
     {% endfor %}
